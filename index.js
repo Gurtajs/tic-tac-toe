@@ -13,6 +13,7 @@ const WINNING_COMBINATIONS = [
 ]
 const text = document.querySelector('.text')
 const button = document.createElement('button')
+button.classList.add('button')
 button.textContent = 'Restart'
 let circleTurn
 
@@ -46,7 +47,8 @@ function handleClick(e) {
 
 function endGame(draw) {
     if (draw) {
-        text.innerText = 'Draw!'
+        text.innerText = 'It\'s a Draw!'
+        text.classList.add('text')
         text.appendChild(button)
     } else {
         text.innerText = `${circleTurn ? "O'S" : "X's"} Wins!`
